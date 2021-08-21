@@ -26,3 +26,4 @@ const deliveriesData = Papa.parse(deliveriesFileData, csvConfiguration).data; //
 // Dump results to JSON files:
 
 fs.writeFileSync(__dirname + '/../public/output/matchesPerYear.json', JSON.stringify(importFunctions.calculateMatchPerYear(matchesData))); // 1. Calculate the number of matches played per year for all the years in IPL.
+fs.writeFileSync(__dirname + '/../public/output/winPerTeamPerYear.json', JSON.stringify(importFunctions.calculateWinPerTeamPerYear(matchesData))); // 2. Calculate the number of matches won per team per year in IPL.
