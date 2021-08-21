@@ -1,0 +1,23 @@
+{
+  "name": "001-ipl",
+  "version": "1.0.0",
+  "description": "001 Project: IPL",
+  "main": "./src/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rachitMountBlueLearning/Rachit_IPL_Project.git"
+  },
+  "author": "Rachit Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachitMountBlueLearning/Rachit_IPL_Project/issues"
+  },
+  "homepage": "https://github.com/rachitMountBlueLearning/Rachit_IPL_Project#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "papaparse": "^5.3.1"
+  }
+}
