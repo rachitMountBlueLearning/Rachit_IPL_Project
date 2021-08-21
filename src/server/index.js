@@ -2,6 +2,7 @@
 
 const fs = require('fs'); // File System module import
 const Papa = require('papaparse'); // Papa-Parse module import
+const importFunctions = require('./ipl').exportFunctions; // Data processing functions import
 
 
 // Extract data:
@@ -11,7 +12,8 @@ const deliveriesFileData = fs.readFileSync(__dirname + '/../data/deliveries.csv'
 
 const csvConfiguration = { // Configuration object for Papa-Parse
 	header: true,
-	dynamicTyping: true
+	dynamicTyping: true,
+	skipEmptyLines: true
 }
 
 
