@@ -13,3 +13,9 @@ const csvConfiguration = { // Configuration object for Papa-Parse
 	header: true,
 	dynamicTyping: true
 }
+
+
+// Parse data from CSV:
+
+const matchesData = Papa.parse(matchesFileData, csvConfiguration).data; // Parse matches.csv data
+const deliveriesData = Papa.parse(deliveriesFileData, csvConfiguration).data; // Parse deliveries.csv data
