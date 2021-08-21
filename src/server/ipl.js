@@ -4,13 +4,13 @@ const exportFunctions = {
     
     // 1. Calculate the number of matches played per year for all the years in IPL.
 
-    calculateMatchPerYear (matchData) {
+    calculateMatchPerYear (matches) {
         const matchesPerYear = {};
-        for(match in matchesData) {
-            if(match['season'] in matchesPerYear) {
-                matchesPerYear[match['season']] += 1;
+        for(let index = 0; index < matches.length; index += 1) {
+            if(matches[index].season in matchesPerYear) {
+                matchesPerYear[matches[index].season] += 1;
             } else {
-                matchesPerYear[match['season']] = 1;
+                matchesPerYear[matches[index].season] = 1;
             }
         }
         return matchesPerYear;
@@ -20,4 +20,4 @@ const exportFunctions = {
 
 // Export functions:
 
-module.exports(exportFunctions);
+module.exports = {exportFunctions};
