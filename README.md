@@ -5,26 +5,19 @@
 1. [Introduction](#introduction)
 2. [Setup](#setup)
 3. [Directory Structure](#directory-structure)
-4. [Output](#output)
-
-<br>
+4. [Modules Used](#modules-used)
+5. [Output](#output)
 
 ## Introduction
 
-This project is deals with managing the data and manipulating it to extract the useful information out of it. This project starts with importing the data from CSV files from [Kaggle](https://www.kaggle.com/manasgarg/ipl) and processing it to answer following questions:
-
-<br>
+This project deals with managing the data and manipulating it to extract the useful information out of it. This project starts with importing the data from CSV files from [Kaggle](https://www.kaggle.com/manasgarg/ipl) and processing it to answer following questions:
 
 1. What is the number of matches played per year for all the years in IPL?
 2. What is the number of matches won per team per year in IPL?
 3. What are the extra runs conceded per team in the year 2016?
 4. Which are the top 10 economical bowlers in the year 2015?
 
-<br>
-
 After extracting these information from the provided data, project's task is to export the information in set of JSON files specific to each of the above questions.
- 
-<br>
 
 ## Setup
 
@@ -78,8 +71,6 @@ cd src/public/output
 
 Refer [here](#output) to see the output for perticular problem.
 
-<br>
-
 ## Directory Structure
 
 Following is the directory structure of the project and its description:
@@ -100,8 +91,14 @@ Following is the directory structure of the project and its description:
       * `topNEconomicalBowlers` : This file contains the solution to the 4th problem.
 * **`node_modules`** : This directory is used by NPM to store third party packages like `papaparse` and `fs`. It will appear once [step 7](#7-install-papaparse-and-fs-package) is performed.
 
-
-<br>
+## Modules Used
+This project uses following two modules for its internal working:
+1. **[`papaparse`](https://www.papaparse.com/)** : Papa Parse is the fastest in-browser CSV (or delimited text) parser for JavaScript. It is reliable and correct according to RFC 4180, and it comes with some of the very convinient, efficient and fast features.
+   
+   Refer [here](https://www.npmjs.com/package/papaparse) to know more about `papaparse` and see its [documentation](http://papaparse.com/docs).
+2. **[`fs`](https://nodejs.dev/learn/the-nodejs-fs-module)** : The `fs` module provides a lot of very useful functionality to access and interact with the file system.
+   
+   Refer [here]() to know more about `js` and see its usage.
 
 ## Output
 Following will be the files containing the solution to corresponding problems after the execution of [step 8](#8-start-the-project).
