@@ -57,6 +57,35 @@ const exportFunctions = {
         }
 
         return extrasPerTeam;
+    },
+
+    // 4. Calculate the top 10 economical bowlers in the year 2015.
+
+    calculateTopEconomicalBolwers(deliveries, matches, targetYear = 2015, topN = 10) {
+        let bowlerStats = {};
+
+        for(delivery of deliveries) {
+            for(match of matches) {
+                if(delivery.match_id === match.id && match.season === targetYear) {
+                    if(delivery.bowler in bowlerStats) {
+                        bowlerStats[delivery.bowler]['runs'] += delivery.total_runs;
+                        bowlerStats[delivery.bowler]['balls'] += 1;
+                    } else {
+                        bowlerStats[delivery.bowler] = {};
+                        bowlerStats[delivery.bowler]['runs'] = delivery.total_runs;
+                        bowlerStats[delivery.bowler]['balls'] = 1;
+                    }
+                }
+            }
+        }
+
+        for([bowler, stat] of Object.entries(bowlerStats)) {
+            bowlerStats[bowler] = 6 * bowlerStats[bowler]['runs'] / bowlerStats[bowler]['balls'];
+        }
+
+        bowlerStats =  Object.entries(bowlerStats).sort((bowlerA, bowlerB) => bowlerA[1] - bowlerB[1]); // Sort the bowlers according to economy. Formula Used: 6 * runs / balls
+        
+        return bowlerStats.slice(0, topN); // Return only top N economy bowlers
     }
 };
 
