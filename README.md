@@ -1,10 +1,13 @@
 # IPL Dataset Project
 
-## Content
+## Contents
 
 1. [Introduction](#introduction)
 2. [Setup](#setup)
+3. [Directory Structure](#directory-structure)
+4. [Output](#output)
 
+<br>
 
 ## Introduction
 
