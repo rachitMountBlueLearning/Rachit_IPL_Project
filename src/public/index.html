@@ -1,2 +1,71 @@
-<html></html><head></head>
-<body><h1>HTML Page</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+		href="https://fonts.googleapis.com/css?family=Alegreya Sans SC|Bellota Text"
+		rel="stylesheet"
+		/>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/series-label.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<script src="./matchesPerYear.js"></script>
+		<script src="./winPerTeamPerYear.js"></script>
+		<script src="./extrasPerTeam.js"></script>
+		<script src="./topNEconomicalBowlers.js"></script>
+		<title>IPL Data Analysis</title>
+	</head>
+	<body style="background-color: rgb(220, 240, 255)">
+		<h1
+			style="
+				font-family: Alegreya Sans SC, Bellota Text, Arial, Helvetica, sans-serif;
+				font-size: 80px;
+				font-weight: bold;
+				text-align: center;
+				background-color: rgb(255, 85, 85);
+				color: rgb(0, 0, 0);
+				border-radius: 20px;
+				width: 50%;
+				margin-left: 25%;
+			"
+		>
+			IPL Data Project Plots
+		</h1>
+        <div
+			id="matchesPerYear"
+			style="
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 50px;
+			"
+		></div>
+		<div 
+			id="winPerTeamPerYear"
+			style="
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 50px;
+			"
+		></div>
+		<div 
+			id="extrasPerTeam"
+			style="
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 50px;
+			"
+		></div>
+		<div 
+			id="topNEconomicalBowlers"
+			style="
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 50px;
+			"
+		></div>
+	</body>
+</html>
