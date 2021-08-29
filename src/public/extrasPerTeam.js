@@ -35,7 +35,9 @@ function plot3(JSONData) {
         series: [
             {
                 name: 'Extra Runs',
-                data: JSONData.map(({extra_runs}) => extra_runs)
+                data: JSONData.map(({extra_runs}) => extra_runs),
+                borderRadius: 10,
+                color: 'rgb(255, 85, 85)'
             }
         ]
     });

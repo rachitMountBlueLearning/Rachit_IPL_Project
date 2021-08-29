@@ -35,7 +35,9 @@ function plot4(JSONData) {
         series: [
             {
                 name: 'Economy',
-                data: JSONData.map(({economy_rate}) => economy_rate)
+                data: JSONData.map(({economy_rate}) => economy_rate),
+                borderRadius: 10,
+                color: 'rgb(255, 85, 85)'
             }
         ]
     });

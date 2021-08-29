@@ -35,7 +35,9 @@ function plot1(JSONData) {
         series: [
             {
                 name: 'Matches',
-                data: JSONData.map(({matches}) => matches)
+                data: JSONData.map(({matches}) => matches),
+                borderRadius: 10,
+                color: 'rgb(255, 85, 85)'
             }
         ]
     });
