@@ -5,7 +5,7 @@
   "main": "./src/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js"
+    "start": "node src/server/index.js && python3 -m http.server && sensible-browser localhost:8000/src/public/index.html"
   },
   "repository": {
     "type": "git",
