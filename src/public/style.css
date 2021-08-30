@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(220, 240, 255);
+}
+h1 {
+    font-family: Alegreya Sans SC, Bellota Text, Arial, Helvetica, sans-serif;
+	font-size: 80px;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(255, 85, 85);
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        width: 50%;
+        margin-left: 25%;
+}
+#matchesPerYear, #winPerTeamPerYear, #extrasPerTeam, #topNEconomicalBowlers {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+}
+#topNEconomicalBowlers {
+    padding-bottom: 100px;
+}
