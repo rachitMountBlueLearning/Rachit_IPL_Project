@@ -7,6 +7,7 @@
 3. [Directory Structure](#directory-structure)
 4. [Modules Used](#modules-used)
 5. [Output](#output)
+6. [Results](#results)
 
 ## Introduction
 
@@ -100,10 +101,15 @@ This project uses following two modules for its internal working:
    
    Refer [here]() to know more about `js` and see its usage.
 
-## Output
+## Outputs
 Following will be the files containing the solution to corresponding problems after the execution of [step 8](#8-start-the-project).
 
 1. **`matchesPerYear.json`** : What is the number of matches played per year for all the years in IPL?
 2. **`winPerTeamPerYear.json`** : What is the number of matches won per team per year in IPL?
 3. **`extrasPerTeam.json`** : What are the extra runs conceded per team in the year 2016?
 4. **`topNEconomicalBowlers`** : Which are the top 10 economical bowlers in the year 2015?
+
+## Results
+The processed data is plotted using **highcharts** module which is included in `index.html` using CDN links. These plots are put into a page which will automatically open up when project is started at [Step 8](#8-start-the-project), however following steps are to be followed to open it manually after Step 8:
+1. Run any server of your choice on any `xxxx` port inside the project directory.
+2. Open any browser of your choice and put the following address: `localhost:xxxx/src/public/index.html`.
