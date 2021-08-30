@@ -33,7 +33,7 @@ After extracting these information from the provided data, project's task is to 
 ### 4. Clone this repository:
 
 ```
-git clone https://github.com/rachitMountBlueLearning/Rachit_IPL_Project.git
+git clone -b refactorArrayMethods https://github.com/rachitMountBlueLearning/Rachit_IPL_Project.git
 ```
 
 ### 5. Go to the working directory:
