@@ -74,7 +74,7 @@ Refer [here](#output) to see the output for perticular problem.
 
 ### 10. Check the plots for the outputs:
 
-Click the [here]("http://localhost:8000/src/public/index.html") to check out the output plots for all the four questions. You can checkout the [results section](#results) for more information on the webpage and plots.
+Click the [here](http://localhost:8000/src/public/index.html) to check out the output plots for all the four questions. You can checkout the [results section](#results) for more information on the webpage and plots.
 
 ## Directory Structure
 
