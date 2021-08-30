@@ -34,7 +34,7 @@ After extracting these information from the provided data, project's task is to 
 ### 4. Clone this repository:
 
 ```
-git clone https://github.com/rachitMountBlueLearning/Rachit_IPL_Project.git
+git clone -b plotData https://github.com/rachitMountBlueLearning/Rachit_IPL_Project.git
 ```
 
 ### 5. Go to the working directory:
@@ -72,6 +72,10 @@ cd src/public/output
 
 Refer [here](#output) to see the output for perticular problem.
 
+### 10. Check the plots for the outputs:
+
+Click the [here](localhost:8000/../src/public/index.html) to check out the output plots for all the four questions. You can checkout the [results section](#results) for more information on the webpage and plots.
+
 ## Directory Structure
 
 Following is the directory structure of the project and its description:
@@ -89,7 +93,13 @@ Following is the directory structure of the project and its description:
       * `matchesPerYear.json` : This file contains the solution to the 1st problem.
       * `winPerTeamPerYear.json` : This file contains the solution to the 2nd problem.
       * `extrasPerTeam.json` : This file contains the solution to the 3rd problem.
-      * `topNEconomicalBowlers` : This file contains the solution to the 4th problem.
+      * `topNEconomicalBowlers.json` : This file contains the solution to the 4th problem.
+    * `matchesPerYear.js` : This file contains the program to process the visualization for `matchesPerYear.json` data on a webpage.
+    * `winPerTeamPerYear.js` : This file contains the program to process the visualization for `winPerTeamPerYear.json` data on a webpage.
+    * `extrasPerTeam.js` : This file contains the program to process the visualization for `extrasPerTeam.json` data on a webpage.
+    * `topNEconomicalBowlers.js` : This file contains the program to process the visualization for `topNEconomicalBowlers.json` data on a webpage.
+    * `index.html` : This file contains code for the webpage for visualization of the results.
+    * `style.css` : This file contains style sheet for `index.html` webpage.
 * **`node_modules`** : This directory is used by NPM to store third party packages like `papaparse` and `fs`. It will appear once [step 7](#7-install-papaparse-and-fs-package) is performed.
 
 ## Modules Used
