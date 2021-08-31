@@ -1,7 +1,8 @@
 fetch('./output/topNEconomicalBowlers.json')
     .then(response => response.json())
     .then(JSONData => plot4(JSONData));
-function plot4(JSONData) {
+
+function plot4(JSON_DATA) {
     Highcharts.chart('topNEconomicalBowlers', {
         title: {
             text: '4. Top 10 Economical Bowlers in IPL 2015'
@@ -25,7 +26,7 @@ function plot4(JSONData) {
             title: {
                 text: 'Bowlers'
             },
-            categories: JSONData.map(({bowler}) => bowler)
+            categories: JSON_DATA.map(({bowler}) => bowler)
         },
         yAxis: {
             title: {
@@ -35,7 +36,7 @@ function plot4(JSONData) {
         series: [
             {
                 name: 'Economy',
-                data: JSONData.map(({economy_rate}) => economy_rate),
+                data: JSON_DATA.map(({economyRate}) => economyRate),
                 borderRadius: 10,
                 color: 'rgb(255, 85, 85)'
             }

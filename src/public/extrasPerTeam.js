@@ -1,7 +1,8 @@
 fetch('./output/extrasPerTeam.json')
     .then(response => response.json())
     .then(JSONData => plot3(JSONData));
-function plot3(JSONData) {
+
+function plot3(JSON_DATA) {
     Highcharts.chart('extrasPerTeam', {
         title: {
             text: '3. Extra Runs Conceded by Teams in IPL 2016'
@@ -25,7 +26,7 @@ function plot3(JSONData) {
             title: {
                 text: 'Teams'
             },
-            categories: JSONData.map(({team}) => team)
+            categories: JSON_DATA.map(({team}) => team)
         },
         yAxis: {
             title: {
@@ -35,7 +36,7 @@ function plot3(JSONData) {
         series: [
             {
                 name: 'Extra Runs',
-                data: JSONData.map(({extra_runs}) => extra_runs),
+                data: JSON_DATA.map(({extraRuns}) => extraRuns),
                 borderRadius: 10,
                 color: 'rgb(255, 85, 85)'
             }

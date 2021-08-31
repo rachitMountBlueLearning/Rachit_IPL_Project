@@ -1,7 +1,8 @@
 fetch('./output/matchesPerYear.json')
     .then(response => response.json())
     .then(JSONData => plot1(JSONData));
-function plot1(JSONData) {
+
+function plot1(JSON_DATA) {
     Highcharts.chart('matchesPerYear', {
         title: {
             text: '1. Number of Matches in IPL Seasons'
@@ -25,7 +26,7 @@ function plot1(JSONData) {
             title: {
                 text: 'Years'
             },
-            categories: JSONData.map(({year}) => year)
+            categories: JSON_DATA.map(({year}) => year)
         },
         yAxis: {
             title: {
@@ -35,7 +36,7 @@ function plot1(JSONData) {
         series: [
             {
                 name: 'Matches',
-                data: JSONData.map(({matches}) => matches),
+                data: JSON_DATA.map(({matches}) => matches),
                 borderRadius: 10,
                 color: 'rgb(255, 85, 85)'
             }
