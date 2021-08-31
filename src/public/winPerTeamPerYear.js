@@ -1,39 +1,42 @@
 fetch('./output/winPerTeamPerYear.json')
     .then(response => response.json())
     .then(JSONData => plot2(JSONData));
-function plot2(JSONData) {
+function plot2(JSON_DATA) {
 
-    const teams = JSONData.reduce((accumulatedTeams, {team}) => {
-        if(!(accumulatedTeams.includes(team))) {
-            accumulatedTeams.push(team);
+    const YEARS_LIST = JSON_DATA
+    .reduce((records, {year}) => {
+        if(!(records.includes(year))) {
+            records.push(year);
         }
-        return accumulatedTeams;
-    }, []).sort((teamA, teamB) => teamA.localeCompare(teamB));
+        return records;
+    }, [])
+    .sort((yearA, yearB) => yearA - yearB);
 
-    const years = JSONData.reduce((accumulatedYears, {year}) => {
-        if(!(accumulatedYears.includes(year))) {
-            accumulatedYears.push(year);
-        }
-        return accumulatedYears;
-    }, []);
+    const SERIES = JSON_DATA
+        .reduce((records, {team}) => {
+            if(!(records.includes(team))) {
+                records.push(team);
+            }
+            return records;
+        }, [])
+        .reduce((records, currentTeam) => {
+            const TEAM_WINS = [];
 
-    const seriesIn = [];
-    teams.forEach(currTeam => {
-        let pushSeries = {
-            name: currTeam,
-            data: []
-        };
-        let pushWins = 0;
-        years.forEach(currYear => {
-            JSONData.forEach(({year, team, wins}) => {
-                if(team === currTeam && year === currYear) {
-                    pushWins = wins;
-                }
+            YEARS_LIST.forEach((currentYear) => {
+                const RECORD_INDEX = JSON_DATA.findIndex(({year, team}) => team === currentTeam && year === currentYear);
+                
+                RECORD_INDEX === -1 ?
+                    TEAM_WINS.push(0) :
+                    TEAM_WINS.push(JSON_DATA[RECORD_INDEX]['wins']);
             })
-            pushSeries['data'].push(pushWins);
-        })
-        seriesIn.push(pushSeries);
-    })
+            records.push({
+                'name': currentTeam,
+                'data': TEAM_WINS
+            });
+
+            return records;
+        }, [])
+        .sort(({name: nameA}, {name: nameB}) => nameA.localeCompare(nameB));
 
     Highcharts.chart('winPerTeamPerYear', {
         title: {
@@ -63,13 +66,13 @@ function plot2(JSONData) {
             title: {
                 text: 'Years'
             },
-            categories: years
+            categories: YEARS_LIST
         },
         yAxis: {
             title: {
                 text: 'Wins'
             }
         },
-        series: seriesIn
+        series: SERIES
     });
 }
